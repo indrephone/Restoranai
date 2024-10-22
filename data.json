@@ -1,0 +1,624 @@
+{
+  "users": [
+    {
+      "_id": "a1234567-4f20-11ee-be56-0242ac120002",
+      "email": "admin@example.com",
+      "username": "admin",
+      "password": "$2b$10$FxY6O7TKbEaC8skxLCNfJONPY1hpDBy6ZzRYtwyU6Nca6b.5Ft5p.",
+      "password_visible": "admin123A&",
+      "role": "admin"
+    },
+    {
+      "_id": "c9b1d4e8-4f1b-11ee-be56-0242ac120002",
+      "email": "user1@example.com",
+      "username": "user1",
+      "password": "$2b$10$GaZuSYlMPhsoM73d6pI6JOoFlEm9qbJmYJJN1oKMmIMeSx9CpnPo2",
+      "password_visible": "password123P&",
+      "role": "user"
+    },
+    {
+      "_id": "f4ca2b88-4f1b-11ee-be56-0242ac120002",
+      "email": "user2@example.com",
+      "username": "user2",
+      "password": "$2b$10$btS91AaVrYrdyt5Wk7v1M.H33Wpe1/UthsMbob6EcLjzVU8qa.hF6",
+      "password_visible": "myPassword456%",
+      "role": "user"
+    },
+    {
+      "_id": "a99d5181-7487-4f0c-bb52-8bc147b839a7",
+      "username": "rokas321",
+      "email": "asd@asd.asd",
+      "password": "$2b$10$hyDv4.NYKr113MUKqT.idO1uGGOfjWrmd6CkWeFKx3u59kjaPyaZ6",
+      "password_visible": "Labas321&asd",
+      "role": "user"
+    },
+    {
+      "_id": "a6a7c299-e805-440a-94ba-f17efe69d754",
+      "username": "LabasRytas",
+      "email": "labas@ha",
+      "password": "$2b$10$6hsBPTXuBRsTbIzwl/hKAetqQV21KrcJkr.DIWSMEuDJ3Et.FB9qG",
+      "password_visible": "321dsfgFG&",
+      "role": "user"
+    },
+    {
+      "_id": "f787a1c2-88e6-4bab-b459-c3f67af4493a",
+      "username": "rokas32",
+      "email": "asda@asd.asd",
+      "password": "$2b$10$7YSxLjGY.YmP0gKd8FVsa.Q9vDzAurB1l177H1hR/3TD1zfmOt5Sm",
+      "password_visible": "321dsfgFG&",
+      "role": "user"
+    },
+    {
+      "_id": "2d3c40a5-ac97-4d43-a42f-32d5fc0588a8",
+      "username": "LabasRytas3",
+      "email": "asasdd@asd.asd",
+      "password": "$2b$10$aI6GVMbg9ICLbovTqpAvT.QpKgi4Tx6ygzm8XE9W3AARZSLd7Q6Tm",
+      "password_visible": "321dsfgFG&",
+      "role": "user"
+    },
+    {
+      "_id": "38d3fb84-4f4a-43fd-bfd8-4d404cedc39b",
+      "username": "rokas5",
+      "email": "asaasdasdasdd@asd.asd",
+      "password": "$2b$10$4K.UM4G4oevrivtYzlGkOusr2RjmlZzbfQ3qtVkl/2/jgkIvwcvUG",
+      "password_visible": "321dsfgFG&",
+      "role": "user"
+    }
+  ],
+  "restaurants": [
+    {
+      "_id": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "location": "Vilnius, Universiteto g. 4",
+      "workHours": {
+        "monday": "11:30-21:00",
+        "tuesday": "11:30-21:00",
+        "wednesday": "11:30-21:00",
+        "thursday": "11:30-21:00",
+        "friday": "11:30-12:00",
+        "saturday": "09:00-23:00",
+        "sunday": "09:00-23:00"
+      },
+      "description": "Tai prabangus restoranas Vilniaus senamiestyje, siūlantis išskirtinę europietišką virtuvę su moderniais lietuviškų patiekalų akcentais. Restorano šefas naudoja tik aukščiausios kokybės vietinius produktus, kad sukurtų nuostabius patiekalus, kurie žavi tiek skoniais, tiek pateikimu. Stilinga ir jauki atmosfera, derinanti eleganciją su šiuolaikiniais dizaino sprendimais, sukuria tobulą vietą ypatingiems vakarienės potyriams. Taip pat restoranas garsėja plačiu vynų asortimentu ir profesionaliu aptarnavimu."
+    },
+    {
+      "_id": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "location": "Kaunas, Vilniaus g. 22",
+      "workHours": {
+        "monday": "11:30-21:00",
+        "tuesday": "11:30-21:00",
+        "wednesday": "11:30-21:00",
+        "thursday": "11:30-21:00",
+        "friday": "11:30-12:00",
+        "saturday": "09:00-23:00",
+        "sunday": "09:00-23:00"
+      },
+      "description": "Meniu siūlo tradicinius lietuviškus patiekalus, pagamintus pagal senus receptus, perduodamus iš kartos į kartą. Kavinėje galite pasimėgauti cepelinais, šaltibarščiais bei kitais tautinio paveldo patiekalais, kuriuos ruošia vietos šeimininkai. Draugiška ir neformali aplinka sukuria namų jaukumą, o terasa su vaizdu į ežerą kviečia atsipalaiduoti ir mėgautis gamtos grožiu. Ideali vieta šeimyninėms vakarienėms ar ramiems savaitgalio pietums gamtos apsuptyje."
+    },
+    {
+      "_id": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "location": "Vilnius, Gedimino pr. 22",
+      "workHours": {
+        "monday": "11:30-21:00",
+        "tuesday": "11:30-21:00",
+        "wednesday": "11:30-21:00",
+        "thursday": "11:30-21:00",
+        "friday": "11:30-23:00",
+        "saturday": "12:00-23:00",
+        "sunday": "12:00-20:00"
+      },
+      "description": "Prabangus restoranas Vilniaus senamiestyje, siūlantis išskirtinę europietišką virtuvę su moderniais lietuviškų patiekalų akcentais. Puiki vieta ypatingoms progoms, kur derinami rafinuoti skoniai ir elegantiška atmosfera."
+    },
+    {
+      "_id": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "location": "Vilnius, Didžioji g. 5",
+      "workHours": {
+        "monday": "10:00-20:00",
+        "tuesday": "10:00-20:00",
+        "wednesday": "10:00-20:00",
+        "thursday": "10:00-21:00",
+        "friday": "10:00-22:00",
+        "saturday": "11:00-22:00",
+        "sunday": "11:00-19:00"
+      },
+      "description": "Šiuolaikinės lietuviškos virtuvės restoranas Vilniaus senamiestyje, kur vietiniai ingredientai susilieja su naujoviškomis gamybos technologijomis. Modernus interjeras ir šiltas aptarnavimas sukuria jaukią ir malonią atmosferą."
+    },
+    {
+      "_id": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "location": "Kaunas, Laisvės al. 53",
+      "workHours": {
+        "monday": "12:00-21:00",
+        "tuesday": "12:00-21:00",
+        "wednesday": "12:00-21:00",
+        "thursday": "12:00-22:00",
+        "friday": "12:00-23:00",
+        "saturday": "13:00-23:00",
+        "sunday": "13:00-20:00"
+      },
+      "description": "Modernus restoranas Kauno centre, siūlantis pasaulinės virtuvės patiekalus su vietiniais ingredientais. Erdvus interjeras ir profesionalus aptarnavimas leidžia mėgautis aukštos kokybės maistu malonioje aplinkoje."
+    },
+    {
+      "_id": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "location": "Kaunas, Vilniaus g. 16",
+      "workHours": {
+        "monday": "11:00-20:00",
+        "tuesday": "11:00-20:00",
+        "wednesday": "11:00-20:00",
+        "thursday": "11:00-21:00",
+        "friday": "11:00-22:00",
+        "saturday": "12:00-22:00",
+        "sunday": "12:00-19:00"
+      },
+      "description": "Restoranas Kauno senamiestyje, siūlantis tradicinius lietuviškus patiekalus su šiuolaikiškais akcentais. Jauki atmosfera ir istorinis interjeras sukuria unikalią valgymo patirtį miesto širdyje."
+    },
+    {
+      "_id": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "location": "Kaunas, K. Donelaičio g. 20",
+      "workHours": {
+        "monday": "09:00-19:00",
+        "tuesday": "09:00-19:00",
+        "wednesday": "09:00-19:00",
+        "thursday": "09:00-20:00",
+        "friday": "09:00-21:00",
+        "saturday": "10:00-21:00",
+        "sunday": "10:00-18:00"
+      },
+      "description": "Restoranas, kuriame derinama lietuviška virtuvė ir šiuolaikiniai pasaulio kulinariniai akcentai. Jaukūs pusryčiai, pietūs ir vakarienės su gausia vietinių produktų pasiūla, tinkanti tiek verslo pietums, tiek šeimyniniams susibūrimams."
+    }
+  ],
+  "tables": [
+    {
+      "_id": "c0d07de1-7233-46ef-b0a2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 2
+    },
+    {
+      "_id": "c0d07ee1-7233-46ef-b0a2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 2
+    },
+    {
+      "_id": "c0d07de1-7233-46ef-bda2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 4
+    },
+    {
+      "_id": "c0a07de1-7233-46ef-b0a2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 4
+    },
+    {
+      "_id": "c0d07de1-7233-46ef-bsa2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 4
+    },
+    {
+      "_id": "c0d07de1-7243-46ef-b0a2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 6
+    },
+    {
+      "_id": "cdd07de1-7233-46ef-b0a2-15c75667d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 6
+    },
+    {
+      "_id": "c0d07de1-7233-46ef-b0a2-15c75667a1f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "size": 8
+    },
+    {
+      "_id": "cdd07de1-7233-46ef-b0a2-15c75457d61f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 6
+    },
+    {
+      "_id": "c0d07de1-7233-46ef-b0a2-15c75697a1f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 8
+    },
+    {
+      "_id": "7dba91e9-6c14-41f9-9f10-874a2140d2f9",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "b8deff4b-5476-4e70-8154-bf0289a0b7b9",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "f469845b-9aa7-4f49-bf4d-d50e66708b62",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "3ec8c7bb-134b-4b75-b030-39b51490cbbc",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "2c1b7f98-0d0b-46cf-810f-5eabf6845f8d",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "e67adba3-4f6a-47cb-8c88-715598223bdb",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "d229c1a9-22f1-4b1f-8b93-8e1e4675f93c",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "d42189c5-55d3-4a63-8641-6f30e52e12af",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "2d188be1-ef7c-41f9-92b5-bf733ad899f6",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "aed1d4cb-2cc5-44cc-abc6-bfcf3d51af7f",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 2
+    },
+    {
+      "_id": "327314b8-d1a1-4d8d-9288-62b9dff6f4a6",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 4
+    },
+    {
+      "_id": "c3f27370-b61d-4b67-b601-c6fbb65e1e18",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 4
+    },
+    {
+      "_id": "b17e4ba7-1a3f-4bc8-b8b0-fc3c5f0585d2",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 4
+    },
+    {
+      "_id": "b22054a9-2956-4b40-a4d4-eacac71b4385",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 4
+    },
+    {
+      "_id": "f542e97c-2a25-4427-8240-b8c109402495",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 4
+    },
+    {
+      "_id": "a8d063e7-5505-4da1-b283-9fb60f90db7e",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 8
+    },
+    {
+      "_id": "7088c028-5db7-4c14-9e3d-7aee70199079",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414d5",
+      "size": 8
+    },
+    {
+      "_id": "4a3dfc02-b327-4733-80d1-b9f9d6d59e7c",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "4a8de4f2-e711-4907-8f50-c110a1e2ac09",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "5101cc50-90c0-46fc-9ce0-0265d1eb9c5e",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "b0d1ed83-6f9f-40cb-95c3-758cfda07fa0",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "882d99c7-26b1-41c5-b01e-b52d63c6905b",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "0b45103c-8f56-4234-b631-0e6c50d567c3",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "66ec6693-e92b-4e79-8021-1557e7362ba4",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "e56d7b5a-0e0a-4ff7-bc5a-b2b78c66ac7c",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "29f7fcfb-e7e2-48d6-88ab-f9a36684b8e1",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "71e9a4b4-9288-429d-9f82-8e5ebdbe4818",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 2
+    },
+    {
+      "_id": "9e775cd9-d287-41c7-bb56-df6c261987af",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 4
+    },
+    {
+      "_id": "ac02e4cf-2594-45c6-aeda-315b17689937",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 4
+    },
+    {
+      "_id": "02d1b54f-5639-40e2-a9d7-68e22163b145",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 4
+    },
+    {
+      "_id": "c29256e6-8af7-4398-b86f-3a1467db0274",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 8
+    },
+    {
+      "_id": "7c81e39e-30f2-4700-bff3-f65c5aee92be",
+      "restaurantId": "f3c19b54-129a-4a91-93f7-263838df2b1e",
+      "size": 8
+    },
+    {
+      "_id": "2f7e8dd3-4c85-4b6d-bc58-9c91c764a9fb",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "cce1677a-b7f8-4f90-9576-285073cb8d29",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "c8e57e93-000f-407d-a9f5-798de81b8a65",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "d25fcb8c-4aef-4947-a2b1-7356cf87f8b5",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "d9baf8b6-918b-411e-88bc-32f4b6ba4073",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "b6f71192-7e88-4264-8472-7d24c0de6d0b",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 2
+    },
+    {
+      "_id": "44de62a8-6f44-473f-9be0-e4f2f556e7cf",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 4
+    },
+    {
+      "_id": "6a5c5266-3c7b-45b5-94ee-22dc95b78d33",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 4
+    },
+    {
+      "_id": "fd41d364-773b-4f68-9b86-729d32e42b6b",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 4
+    },
+    {
+      "_id": "a7e276c4-1f37-40e4-bb4d-e888b6de1b08",
+      "restaurantId": "b82a23ad-7b8f-48bb-8af2-e3240e1b9d51",
+      "size": 8
+    },
+    {
+      "_id": "d905572e-6b3b-4e46-a5e4-bb1c44d9efc6",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 2
+    },
+    {
+      "_id": "da08dc35-b243-4701-8974-d2bbcc2a4d86",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 2
+    },
+    {
+      "_id": "f8a96f7e-66de-4ca4-8e81-1d23582799b7",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 4
+    },
+    {
+      "_id": "c56e01f3-bd76-43f3-8aaf-8dc2957eb372",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 4
+    },
+    {
+      "_id": "0e22667b-dfa3-4191-a695-e93f430be7c4",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 4
+    },
+    {
+      "_id": "71e95f98-600e-4b4c-8375-fdcd07f74cfd",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 4
+    },
+    {
+      "_id": "a15e67f2-f66b-47e6-b624-b60fd5ac57b2",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 6
+    },
+    {
+      "_id": "e543612e-3181-4727-b23c-aba5e7ca68e0",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 6
+    },
+    {
+      "_id": "e10f847c-d539-4556-9050-bbc5e5cf0041",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 8
+    },
+    {
+      "_id": "a22bcb68-4c37-44d2-b10c-358aa18b4343",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 8
+    },
+    {
+      "_id": "d8d44a29-07b9-4b68-bd84-ec8bc65b52d4",
+      "restaurantId": "9e8e7b24-c91a-4be7-94ec-df0dd4f7a90a",
+      "size": 12
+    },
+    {
+      "_id": "f39fbc09-5a5e-4b58-bc4c-c1b1b91e43be",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 2
+    },
+    {
+      "_id": "7f7a36cb-16e4-4f0c-b45e-542db8a6b9e7",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 2
+    },
+    {
+      "_id": "2b934289-e649-49cd-9b9b-0d5ae3f1aa88",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 4
+    },
+    {
+      "_id": "709f7942-0a59-4cc6-bff2-2794c477db9f",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 4
+    },
+    {
+      "_id": "18b5c99b-2e96-4475-bc68-e9ed65c8f01c",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 4
+    },
+    {
+      "_id": "ad4bcbd8-c6fc-4d48-bb9f-c7d4f53d3d7e",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 4
+    },
+    {
+      "_id": "6412f5f5-f6b0-4f1a-bc35-5a6a8f80f2b6",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 6
+    },
+    {
+      "_id": "0e251636-070d-4d9f-92e0-623a0e5b5779",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 6
+    },
+    {
+      "_id": "c7f76530-6989-4705-9f02-efde6c03585b",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 8
+    },
+    {
+      "_id": "09ee66f7-55e7-4f2b-a5ed-0071d7c1aeb7",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 8
+    },
+    {
+      "_id": "e32c4258-bc3b-48d2-8a09-bb7996458ef9",
+      "restaurantId": "8f7a5e18-bf3f-46cc-b57d-bfd1d7b88f5d",
+      "size": 12
+    },
+    {
+      "_id": "9e0a2d3b-bb09-4e62-b1af-e10d98f20614",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 2
+    },
+    {
+      "_id": "b9c9f7c5-e0ff-40a8-8891-e4b849c0c52b",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 2
+    },
+    {
+      "_id": "ed9f0e9c-cd55-448e-8ae1-4dc04ebacb63",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 4
+    },
+    {
+      "_id": "b9561b98-8eaf-438b-b601-b15a0c8da09f",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 4
+    },
+    {
+      "_id": "1e2e3c26-5c04-4f99-8af2-83c92c5a66a1",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 4
+    },
+    {
+      "_id": "f8bcb0e7-4e70-418e-b0e3-c1a4f4d06e58",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 4
+    },
+    {
+      "_id": "8ac9b5f4-3a68-4e3f-b5cf-33a0b942c66f",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 6
+    },
+    {
+      "_id": "c3b36496-7857-4a80-b372-e97988dff647",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 6
+    },
+    {
+      "_id": "de951cb8-e6d9-4c7d-b588-15a4cfcb6948",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 8
+    },
+    {
+      "_id": "e7c785ed-b94a-466e-a9b4-558b6cc858b0",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 8
+    },
+    {
+      "_id": "de8f9441-bd02-41d6-93b2-1540d2065725",
+      "restaurantId": "c7894ea1-d1b9-4f96-80f6-76e3c14c0a15",
+      "size": 12
+    }
+  ],
+  "reservation": [
+    {
+      "_id": "a1589479-42dd-4726-a635-d9c31077f54b",
+      "userId": "62c13cce-e2bf-4207-a5e2-0ef850b4d997",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "tableId": "c0d07de1-7233-46ef-b0a2-15c75667d61f",
+      "reservationTime": "2024-10-15T19:30:00"
+    }
+  ],
+  "archReservation": [
+    {
+      "_id": "c5edb867-de46-4c90-860b-d4e89a28a310",
+      "userId": "62c13cce-e2bf-4207-a5e2-0ef850b4d997",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "tableId": "c0d07de1-7233-46ef-b0a2-15c75667d61f",
+      "reservationTime": "2022-11-09T19:30:00"
+    }
+  ],
+  "comments": [
+    {
+      "_id": "7b11a270-1df1-4d13-9695-9ae26a849704",
+      "userId": "62c13cce-e2bf-4207-a5e2-0ef850b4d997",
+      "restaurantId": "db2da91f-b8a7-40f1-bc3b-53c024d414c5",
+      "comment": "buvo labai skanu! grisim vel!!!",
+      "rating": 5,
+      "commentDate": "2023-10-09T19:30:00",
+      "likes": []
+    }
+  ]
+}
