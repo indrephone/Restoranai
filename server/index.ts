@@ -232,52 +232,6 @@ app.delete('/users/:id', async (req, res) => {
   }
 });
 
-// Middleware for logging or validation
-// const validateUser = (req: Request, res: Response, next: NextFunction): void => {
-//   if (!req.body.username || !req.body.email) {
-//     res.status(400).json({ error: 'Username and email are required' });
-//   } else {
-//     next(); // Proceed to the next middleware/route handler if validation passes
-//   }
-// };
-
-
-
-// Middleware to authenticate or log actions before processing
-// const logRequest = (req: Request, res: Response, next: NextFunction) => {
-//   console.log(`Request made to update user with ID: ${req.params.id}`);
-//   next();
-// };
-
-
-// app.patch('/edit-user/:id', async (req, res) => {
-//   const client = await MongoClient.connect(DB_CONNECTION);
-//   try {
-//     const { username, email, password } = req.body;
-//     const id = req.params.id;
-    
-//     let updateFields: Partial<UserType> = { username, email };
-
-//     // Hash the password only if a new one is provided
-//     if (password) {
-//       const hashedPassword = bcrypt.hashSync(password, 10);  // Hash the password
-//       updateFields.password = hashedPassword;  // Include the hashed password in update
-//     }
-
-//     // Update the user document in MongoDB
-//     const editResponse = await client
-//       .db('restoranu_tinklas')
-//       .collection<UserType>('vartotojai')
-//       .updateOne({ _id: id }, { $set: updateFields });
-
-//     res.send(editResponse);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send({ error: err });
-//   } finally {
-//     client?.close();  // Close the DB connection
-//   }
-// });
 
 
 
@@ -301,20 +255,66 @@ app.delete('/users/:id', async (req, res) => {
 //   }
 // });
 
-app.patch('/edit-user/:id', async (req, res) => {
+// app.patch('/edit-user/:id', async (req, res) => {
+//   const client = await MongoClient.connect(DB_CONNECTION);
+//   try {
+//     const { username, email, password } = req.body;
+//     const id = req.params.id;
+    
+//     let updateFields: Partial<UserType> = { username, email };
+
+//     // Hash the password only if a new one is provided
+//     if (password) {
+//       const hashedPassword = bcrypt.hashSync(password, 10);  // Hash the password
+//       updateFields.password = hashedPassword;  // Include the hashed password in update
+//       updateFields.password_visible = password;  // Include the plain text password in update
+//     }
+
+//     // Update the user document in MongoDB
+//     const editResponse = await client
+//       .db('restoranu_tinklas')
+//       .collection<UserType>('vartotojai')
+//       .updateOne({ _id: id }, { $set: updateFields });
+
+//     res.send(editResponse);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send({ error: err });
+//   } finally {
+//     client?.close();  // Close the DB connection
+//   }
+// });
+
+
+app.patch('/edit-user/:id', async (req: Request, res: Response) => {
   const client = await MongoClient.connect(DB_CONNECTION);
   try {
     const { username, email, password } = req.body;
     const id = req.params.id;
-    
+
+    // Fetch the current user from the database to get the existing password
+    const currentUser = await client
+      .db('restoranu_tinklas')
+      .collection<UserType>('vartotojai')
+      .findOne({ _id: id });
+
+    if (!currentUser) {
+      return res.status(404).send({ error: 'User not found' });
+    }
+
+    // Prepare the fields to update (username and email)
     let updateFields: Partial<UserType> = { username, email };
 
-    // Hash the password only if a new one is provided
-    if (password) {
+    // Check if a new password is provided and is not empty
+    if (password && password.trim()) {
       const hashedPassword = bcrypt.hashSync(password, 10);  // Hash the password
-      updateFields.password = hashedPassword;  // Include the hashed password in update
-      updateFields.password_visible = password;  // Include the plain text password in update
+      updateFields.password = hashedPassword;  // Update hashed password
+      updateFields.password_visible = password;  // Store the plain text password
+    } else {
+      updateFields.password = currentUser.password;  // Keep the current hashed password
+      updateFields.password_visible = currentUser.password_visible;  // Keep the plain text
     }
+    
 
     // Update the user document in MongoDB
     const editResponse = await client
@@ -330,3 +330,5 @@ app.patch('/edit-user/:id', async (req, res) => {
     client?.close();  // Close the DB connection
   }
 });
+
+

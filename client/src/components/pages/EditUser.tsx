@@ -24,16 +24,18 @@ const EditUser: React.FC = () => {
         initialValues={{
           username: user.username || '',
           email: user.email || '',
-          password: '', // Password can remain empty unless changed
+          password: '', // Password remains empty unless changed
         }}
         onSubmit={async (values) => {
-          const filteredValues = {
+          // Create filteredValues to conditionally include the password
+          const filteredValues: Omit<UserType, '_id'> = {
             username: values.username || user.username,
             email: values.email || user.email,
-            password: values.password || user.password,
-            password_visible: values.password ? values.password : user.password_visible,
-            role: user.role, // Assuming role is not updated via form
+            role: user.role, 
+            password: values.password || '', // This guarantees password is a string
+            password_visible: values.password || '',
           };
+
           const result = await editSpecificUser(filteredValues, user._id);
           if ('success' in result) {
             navigate('/userPage');

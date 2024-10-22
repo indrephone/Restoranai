@@ -126,28 +126,56 @@ const UsersProvider = ({ children }: ChildProp) => {
     }
   };  
 
-  // Function to edit a specific user
+
+
+
   const editSpecificUser = async (editedUser: Omit<UserType, "_id">, userId: string): Promise<ErrorOrSuccessReturn> => {
     try {
+      // Fetch current user info from localStorage
+      const localStorageInfo = localStorage.getItem('loggedInUser');
+      let currentUser: UserType | null = null;
+  
+      if (localStorageInfo) {
+        currentUser = JSON.parse(localStorageInfo) as UserType;
+      }
+  
+      // Check if the currentUser exists and matches the userId
+      if (!currentUser || currentUser._id !== userId) {
+        return { error: "User not found in localStorage or mismatch with userId." };
+      }
+  
+      // Merge the updated data from editedUser and currentUser
+      const updatedUser = {
+        ...currentUser,  // Keep old data
+        username: editedUser.username || currentUser.username,
+        email: editedUser.email || currentUser.email,
+        password: editedUser.password || currentUser.password,  // Retain old password if not updated
+        password_visible: editedUser.password ? editedUser.password : currentUser.password_visible, // Update password_visible only if password is changed
+        role: currentUser.role,  // Role should remain the same
+      };
+  
+      // Send the PATCH request to update user data in the backend
       const res = await fetch(`/api/edit-user/${userId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(editedUser),
+        body: JSON.stringify(updatedUser),  // Send the updated user data
       });
-
+  
       if (!res.ok) return { error: "Failed to update user." };
-      const updatedUser = await res.json();
-      
-      setLoggedInUser((prev) => (prev && prev._id === userId ? { ...prev, ...updatedUser } : prev));
+  
+      // Update both the state and localStorage with the merged user data
+      setLoggedInUser(updatedUser);
       localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+  
       return { success: "User updated successfully." };
     } catch (err) {
       console.error("Error updating user:", err);
       return { error: "Server error. Please try again later." };
     }
   };
-
   
+  
+    
 
 
   // Function to return a specific user
